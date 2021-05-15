@@ -1,0 +1,40 @@
+ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test001.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+#用本地内容替换自己的改动
+git restore test001.txt
+
+
+#git log --oneline
+git reflog
+
+切换分支
+git checkout branchname
+
+查看所有分支
+git branch -v 
+
+
+分支merge(hot_fix的内容更新到master中)
+git checkout 旧brach
+git checkout master
+
+meger执行
+git merge hot_fix
+
+meger冲突
+$ git merge hot_fix
+Auto-merging test002.txt
+CONFLICT (content): Merge conflict in test002.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+大鹏@DESKTOP-CF23KGE MINGW64 /e/jyo/workspaces (master|MERGING)
+
+把文件test002.txt手动编辑
+add commit 就可以了
